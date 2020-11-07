@@ -106,7 +106,7 @@ def checkTime():
 
 def checkStatus():
     if 'servState' in globals():
-        info = "Syrian Warfare Operations is currently: {}".format(servState)
+        info = "Storm Eagle Operations is currently: {}".format(servState)
     else:
         info = "Please wait for this information to be intialised and try again soon"
     HBDiffTime = time.time() - lastHeartbeat
@@ -176,32 +176,32 @@ def thread_message():
             return
 
         if message.content == '!help':
-            info = '```!Server Info Syria or !Info Syria to show overall information \n!Time Syria or !Mission Time Syria will return in-game time and time to next restart. \n!Status Syria or !Server Status Syria will return server status. \n!Players Syria or !List Players Syria will return number of players online. \n!Reset Syria or !Restart Syria replies with time to next server reset```'
+            info = '```!Server Info S1 or !Info S1 to show overall information \n!Time S1 or !Mission Time S1 will return in-game time and time to next restart. \n!Status S1 or !Server Status S1 will return server status. \n!Players S1 or !List Players S1 will return number of players online. \n!Reset S1 or !Restart S1 replies with time to next server reset```'
             if info:
                 await message.channel.send(info)
 
-        if message.content == '!Time Syria' or message.content == '!Mission Time Syria':
+        if message.content == '!Time S1' or message.content == '!Mission Time S1':
             info = checkTime()
             if info:
                 await message.channel.send(info)
                 
 
-        if message.content == '!Status Syria' or message.content ==  '!Server Status Syria':
+        if message.content == '!Status S1' or message.content ==  '!Server Status S1':
             info = checkStatus()
             if info:
                 await message.channel.send(info)
 
-        if message.content == '!Players Syria' or message.content ==  '!List Players Syria':
+        if message.content == '!Players S1' or message.content ==  '!List Players S1':
             info = checkPlayers()
             if info:
                 await message.channel.send(info)
                 
-        if message.content == "!Reset Syria" or message.content == "!Restart Syria":
+        if message.content == "!Reset S1" or message.content == "!Restart S1":
             info = checkRestart()
             if info:
                 await message.channel.send(info)
 
-        if message.content == '!Server Info Syria' or message.content == '!Info Syria':
+        if message.content == '!Server Info S1' or message.content == '!Info S1':
             info = checkInfo()
             if info:
                 await message.channel.send(info)
